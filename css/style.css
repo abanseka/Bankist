@@ -1,19 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Poppins, Geneva, Tahoma, sans-serif;
+  font-family: Poppins, sans-serif;
   color: #444;
   background-color: #f3f3f3;
-  padding: 20px;
+  height: 100vh;
+  padding: 2rem;
 }
 
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
 }
@@ -60,6 +66,111 @@ nav {
 .login-btn:hover {
   outline: none;
   color: #777;
+}
+
+.app {
+  display: grid;
+  margin: 4rem auto;
+  max-width: 100rem;
+}
+
+.balance {
+  grid-column: 1/span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+.balance__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
+}
+.balance__value {
+  font-size: 4.5rem;
+  color: #888;
+}
+
+.transaction {
+  grid-row: 2/span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.transaction__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.transaction__type {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  margin-right: 2rem;
+}
+.transaction__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #777;
+}
+.transaction__amount {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+.deposits {
+  background-color: #39b385;
+}
+
+.withdrawals {
+  background-color: #e52a5a;
+}
+
+.summary {
+  grid-row: 5/6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+.summary__amount {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+
+.amount-in,
+.interest-amount {
+  color: #39b385;
+}
+
+.amount-out {
+  color: #e52a5a;
+}
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+.btn--sort:hover {
+  color: #bbb;
 }
 
 /*# sourceMappingURL=style.css.map */
