@@ -154,11 +154,21 @@ nav {
   background-color: #ffb003;
 }
 
+.loan {
+  background-color: #39b385;
+}
+
 .form {
   display: grid;
   grid-template-columns: 2.5fr 2.5fr 1fr;
   grid-template-rows: auto auto;
   gap: 0.4rem 1rem;
+}
+.form-loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label-loan {
+  grid-row: 2;
 }
 .form__input {
   width: 100%;
