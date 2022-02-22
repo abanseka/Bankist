@@ -134,4 +134,43 @@ nav {
   background-color: #e52a5a;
 }
 
+.summary {
+  grid-row: 5/6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.3rem;
+  margin-top: 1rem;
+}
+.summary__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.8rem;
+}
+.summary__amount {
+  font-size: 2.2rem;
+  margin-right: 2.5rem;
+}
+
+.amount-in,
+.interest-amount {
+  color: #39b385;
+}
+
+.amount-out {
+  color: #e52a5a;
+}
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 200;
+  cursor: pointer;
+}
+.btn--sort:hover {
+  color: #bbb;
+}
+
 /*# sourceMappingURL=style.css.map */
