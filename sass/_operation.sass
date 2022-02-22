@@ -15,6 +15,9 @@
 .loan 
   background-color: $green
 
+.close
+  background-color: $red
+
 .form
   display: grid
   grid-template-columns: 2.5fr 2.5fr 1fr
@@ -38,6 +41,10 @@
     padding: .3rem 1rem 
     border-radius: .7rem 
     transition: all .3s
+    
+  &__input:focus
+    outline: none 
+    background-color: $opaque-secondary
 
   &__label
     font-size: 1.3rem
@@ -50,3 +57,12 @@
     background-color: $white 
     cursor: pointer 
     transition: all .3s
+
+.logout-timer
+  padding: 0 .3rem
+  margin-top: 1.9rem 
+  text-align: right
+  font-size: 1.25rem
+
+.timer
+  font-weight: 600 

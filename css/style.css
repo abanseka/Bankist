@@ -158,6 +158,10 @@ nav {
   background-color: #39b385;
 }
 
+.close {
+  background-color: #e52a5a;
+}
+
 .form {
   display: grid;
   grid-template-columns: 2.5fr 2.5fr 1fr;
@@ -182,6 +186,10 @@ nav {
   border-radius: 0.7rem;
   transition: all 0.3s;
 }
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
 .form__label {
   font-size: 1.3rem;
   text-align: center;
@@ -193,6 +201,17 @@ nav {
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
+}
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.timer {
+  font-weight: 600;
 }
 
 .summary {
