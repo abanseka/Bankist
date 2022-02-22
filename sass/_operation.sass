@@ -1,0 +1,68 @@
+.operation
+  border-radius: 1rem
+  padding: 3rem 4rem
+  color: $black
+
+  h2
+    margin-bottom: 1.5rem
+    font-size: 1.7rem
+    font-weight: 600
+    color: $black
+ 
+.transfer
+   background-color: $yellow
+
+.loan 
+  background-color: $green
+
+.close
+  background-color: $red
+
+.form
+  display: grid
+  grid-template-columns: 2.5fr 2.5fr 1fr
+  grid-template-rows: auto auto
+  gap: .4rem 1rem
+  
+  &-loan
+    grid-template-columns: 2.5fr 1fr 2.5fr
+
+  &__label-loan
+    grid-row: 2
+
+  &__input
+    width: 100%
+    border: none 
+    background-color: $opaque
+    font-family: inherit
+    font-size: 1.5rem
+    text-align: center 
+    color: $black 
+    padding: .3rem 1rem 
+    border-radius: .7rem 
+    transition: all .3s
+    
+  &__input:focus
+    outline: none 
+    background-color: $opaque-secondary
+
+  &__label
+    font-size: 1.3rem
+    text-align: center
+
+  &__btn
+    border: none
+    border-radius: .7rem 
+    font-size: 1.8rem
+    background-color: $white 
+    cursor: pointer 
+    transition: all .3s
+
+.logout-timer
+  padding: 0 .3rem
+  margin-top: 1.9rem 
+  text-align: right
+  font-size: 1.25rem
+
+.timer
+  font-weight: 600 

@@ -72,6 +72,10 @@ nav {
   display: grid;
   margin: 4rem auto;
   max-width: 100rem;
+  position: relative;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem;
 }
 
 .balance {
@@ -132,6 +136,82 @@ nav {
 
 .withdrawals {
   background-color: #e52a5a;
+}
+
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+}
+.operation h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.transfer {
+  background-color: #ffb003;
+}
+
+.loan {
+  background-color: #39b385;
+}
+
+.close {
+  background-color: #e52a5a;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+.form-loan {
+  grid-template-columns: 2.5fr 1fr 2.5fr;
+}
+.form__label-loan {
+  grid-row: 2;
+}
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+.form__btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.timer {
+  font-weight: 600;
 }
 
 .summary {

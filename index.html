@@ -60,7 +60,7 @@
           <div class="transaction__date">24/01/2037</div>
           <div class="transaction__amount">-378€</div>
         </div>
-        <div class="transaction__row">
+        <!-- <div class="transaction__row">
           <div class="transaction__type deposits">2 deposit</div>
           <div class="transaction__date">3 days ago</div>
           <div class="transaction__amount">4 0000€</div>
@@ -69,7 +69,7 @@
           <div class="transaction__type withdrawals">1 withdrawal</div>
           <div class="transaction__date">24/01/2037</div>
           <div class="transaction__amount">-378€</div>
-        </div>
+        </div> -->
       </div>
 
       <!-- SUMMARY  -->
@@ -82,6 +82,47 @@
         <p class="summary__amount interest-amount">0000€</p>
         <button class="btn--sort">&bigtriangledown; SORT</button>
       </div>
+
+      <!-- OPERATION: TRANSFER  -->
+      <div class="operation transfer">
+        <h2>Transfer money</h2>
+        <form class="form form-transfer">
+          <input type="text" class="form__input transfer-to" />
+          <input type="number" class="form__input transfer-amount" />
+          <button class="form__btn btn-transfer">&vartriangleright;</button>
+          <label for="transfer" class="form__label">Transfer to</label>
+          <label for="amount" class="form__label">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: LOAN  -->
+      <div class="operation loan">
+        <h2>Request loan</h2>
+        <form class="form form-loan">
+          <input type="number" class="form__input loan-amount" />
+          <button class="form__btn btn-loan">&vartriangleright;</button>
+          <label for="amount" class="form__label form__label-loan"
+            >Amount</label
+          >
+        </form>
+      </div>
+
+      <!-- OPERATION: TRANSFER  -->
+      <div class="operation close">
+        <h2>Close account</h2>
+        <form class="form form-close">
+          <input type="text" class="form__input close-user" />
+          <input type="password" maxlength="6" class="form__input close-pin" />
+          <button class="form__btn btn-close">&vartriangleright;</button>
+          <label for="close" class="form__label">Confirm user</label>
+          <label for="pin" class="form__label">Confirm PIN</label>
+        </form>
+      </div>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
     </main>
   </body>
 </html>
