@@ -95,4 +95,43 @@ nav {
   color: #888;
 }
 
+.transaction {
+  grid-row: 2/span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.transaction__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.transaction__type {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  margin-right: 2rem;
+}
+.transaction__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #777;
+}
+.transaction__amount {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+
+.deposits {
+  background-color: #39b385;
+}
+
+.withdrawals {
+  background-color: #e52a5a;
+}
+
 /*# sourceMappingURL=style.css.map */
