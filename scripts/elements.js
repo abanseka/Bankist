@@ -12,6 +12,7 @@ export const totalBalance = document.querySelector(".balance__value");
 export const transactionNumber = document.querySelector(".transaction__type");
 export const transactionDate = document.querySelector(".transaction__date");
 export const transactionAmount = document.querySelector(".transaction__amount");
+export const transactionDisplay = document.querySelector(".transaction");
 
 // summary elements
 export const summaryAmountIn = document.querySelector(".amount-in");

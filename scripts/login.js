@@ -5,6 +5,7 @@ import {
   userName,
   userPassword,
 } from "./elements";
+import { displayTransactions } from "./transactions";
 
 let currentAccount;
 export const createUsernames = function (acc) {
@@ -31,5 +32,7 @@ export const login = function (acc) {
       appContainer.style.opacity = 100;
       userName.value = userPassword.value = "";
     }
+    // console.log(currentAccount);
+    displayTransactions(currentAccount.transactions);
   });
 };

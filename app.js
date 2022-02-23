@@ -7,5 +7,3 @@ const init = function () {
 };
 
 init();
-
-// console.log(accounts);
