@@ -5,6 +5,7 @@ import {
   userName,
   userPassword,
 } from "./elements";
+import { displaySummary } from "./summary";
 import { displayTransactions } from "./transactions";
 
 let currentAccount;
@@ -34,5 +35,6 @@ export const login = function (acc) {
     }
     // console.log(currentAccount);
     displayTransactions(currentAccount.transactions);
+    displaySummary(currentAccount);
   });
 };
