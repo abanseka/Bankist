@@ -12,7 +12,7 @@ export const displayTransactions = function (transaction, sort = false) {
     const markup = `
             <div class="transaction__row">
               <div class="transaction__type ${type}">${i + 1} ${type}</div>
-              <div class="transaction__amount">${amount}</div>
+              <div class="transaction__amount">${amount}€</div>
             </div>
     `;
     transactionDisplay.insertAdjacentHTML("afterbegin", markup);
