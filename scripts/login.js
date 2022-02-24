@@ -1,3 +1,4 @@
+import { displayBalance } from "./balance";
 import {
   appContainer,
   greetings,
@@ -35,6 +36,7 @@ export const login = function (acc) {
     }
     // console.log(currentAccount);
     displayTransactions(currentAccount.transactions);
+    displayBalance(currentAccount);
     displaySummary(currentAccount);
   });
 };
