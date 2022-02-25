@@ -1,4 +1,4 @@
-import { transferAmount, transferRecipient } from "./elements";
+import { loanAmount, transferAmount, transferRecipient } from "./elements";
 
 export const transferMoney = function (account, currentAccount) {
   const currentAcc = currentAccount;
@@ -18,4 +18,16 @@ export const transferMoney = function (account, currentAccount) {
     currentAcc.transactions.push(-transferAmt);
     [transferAmount.value, transferRecipient.value] = ["", ""];
   }
+};
+
+export const loanMoney = function (account) {
+  const amount = Number(loanAmount.value);
+  if (
+    amount > 0 &&
+    account.transactions.some((transaction) => transaction >= amount * 0.1)
+  ) {
+    account.transactions.push(amount);
+  }
+
+  loanAmount.value = "";
 };

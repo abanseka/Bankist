@@ -2,12 +2,13 @@ import { displayBalance } from "./balance";
 import {
   appContainer,
   greetings,
+  loanBtn,
   loginBtn,
   tranferBtn,
   userName,
   userPassword,
 } from "./elements";
-import { transferMoney } from "./operations";
+import { loanMoney, transferMoney } from "./operations";
 import { updateUI } from "./updateUi";
 
 let currentAccount;
@@ -42,6 +43,12 @@ export const login = function (acc) {
     tranferBtn.addEventListener("click", function (e) {
       e.preventDefault();
       transferMoney(acc, currentAccount);
+      updateUI(currentAccount);
+    });
+
+    loanBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      loanMoney(currentAccount);
       updateUI(currentAccount);
     });
   });
