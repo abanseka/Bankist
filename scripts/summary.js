@@ -16,6 +16,6 @@ export const displaySummary = function (account) {
     .reduce((sum, current) => sum + current, 0);
 
   summaryAmountIn.textContent = `${income}€`;
-  summaryAmountOut.textContent = `${dispense}€`;
+  summaryAmountOut.textContent = `${Math.abs(dispense)}€`;
   interest.textContent = `${interestt}€`;
 };
