@@ -29,6 +29,7 @@ export const loanAmount = document.querySelector(".loan-amount");
 export const loanBtn = document.querySelector(".btn-loan");
 export const closeAccountUname = document.querySelector(".close-user");
 export const closeAccountUpassword = document.querySelector(".close-pin");
+export const closeAccountBtn = document.querySelector(".btn-close");
 export const timer = document.querySelector(".timer");
 
 // containers
