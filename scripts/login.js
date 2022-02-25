@@ -1,6 +1,6 @@
-import { displayBalance } from "./balance";
 import {
   appContainer,
+  closeAccountBtn,
   greetings,
   loanBtn,
   loginBtn,
@@ -8,7 +8,7 @@ import {
   userName,
   userPassword,
 } from "./elements";
-import { loanMoney, transferMoney } from "./operations";
+import { closeAccount, loanMoney, transferMoney } from "./operations";
 import { updateUI } from "./updateUi";
 
 let currentAccount;
@@ -50,6 +50,12 @@ export const login = function (acc) {
       e.preventDefault();
       loanMoney(currentAccount);
       updateUI(currentAccount);
+    });
+
+    closeAccountBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      console.log("clicked");
+      closeAccount(acc, currentAccount);
     });
   });
 };

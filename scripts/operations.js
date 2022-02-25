@@ -1,4 +1,13 @@
-import { loanAmount, transferAmount, transferRecipient } from "./elements";
+import {
+  appContainer,
+  closeAccountUname,
+  closeAccountUpassword,
+  loanAmount,
+  transferAmount,
+  transferRecipient,
+} from "./elements";
+
+export let AccIndex;
 
 export const transferMoney = function (account, currentAccount) {
   const currentAcc = currentAccount;
@@ -30,4 +39,24 @@ export const loanMoney = function (account) {
   }
 
   loanAmount.value = "";
+};
+
+export const closeAccount = function (accounts, currentAccount) {
+  const currentAcc = currentAccount;
+  const username = currentAcc.username;
+  const password = currentAcc.pin;
+
+  console.log(currentAcc, username, password);
+
+  if (
+    closeAccountUname.value === username &&
+    Number(closeAccountUpassword.value) === password
+  ) {
+    AccIndex = Object.values(accounts).findIndex(
+      (account) => account.username === username
+    );
+
+    appContainer.style.opacity = 0;
+  }
+  [closeAccountUname.value, closeAccountUpassword.value] = ["", ""];
 };
