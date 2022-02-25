@@ -3,11 +3,12 @@ import {
   appContainer,
   greetings,
   loginBtn,
+  tranferBtn,
   userName,
   userPassword,
 } from "./elements";
-import { displaySummary } from "./summary";
-import { displayTransactions } from "./transactions";
+import { transferMoney } from "./operations";
+import { updateUI } from "./updateUi";
 
 let currentAccount;
 export const createUsernames = function (acc) {
@@ -34,9 +35,14 @@ export const login = function (acc) {
       appContainer.style.opacity = 100;
       userName.value = userPassword.value = "";
     }
-    // console.log(currentAccount);
-    displayTransactions(currentAccount.transactions);
-    displayBalance(currentAccount);
-    displaySummary(currentAccount);
+
+    updateUI(currentAccount);
+
+    //
+    tranferBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      transferMoney(acc, currentAccount);
+      updateUI(currentAccount);
+    });
   });
 };
