@@ -9,7 +9,7 @@ import {
 
 export let AccIndex;
 
-export const transferMoney = function (account, currentAccount) {
+export const transferMoney = function(account, currentAccount) {
   const currentAcc = currentAccount;
   let recipientUsername = transferRecipient.value;
   let transferAmt = Number(transferAmount.value);
@@ -25,11 +25,14 @@ export const transferMoney = function (account, currentAccount) {
   ) {
     recipientAccount.transactions.push(transferAmt);
     currentAcc.transactions.push(-transferAmt);
+
+    currentAcc.transactionDates.push(new Date().toISOString());
+    recipientAccount.transactionDates.push(new Date().toISOString());
     [transferAmount.value, transferRecipient.value] = ["", ""];
   }
 };
 
-export const loanMoney = function (account) {
+export const loanMoney = function(account) {
   const amount = Number(loanAmount.value);
   if (
     amount > 0 &&
@@ -41,7 +44,7 @@ export const loanMoney = function (account) {
   loanAmount.value = "";
 };
 
-export const closeAccount = function (accounts, currentAccount) {
+export const closeAccount = function(accounts, currentAccount) {
   const currentAcc = currentAccount;
   const username = currentAcc.username;
   const password = currentAcc.pin;
