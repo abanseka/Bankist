@@ -1,5 +1,5 @@
 import { transactionDisplay } from "./elements";
-import { transactionDates } from "./updateUi";
+import { formatCur, transactionDates } from "./updateUi";
 
 export const displayTransactions = function(
   currentAccount,
@@ -22,11 +22,16 @@ export const displayTransactions = function(
       date,
       currAccount.locale
     );
+    const formattedAmount = formatCur(
+      amount,
+      currAccount.locale,
+      currAccount.currency
+    )
     const markup = `
             <div class="transaction__row">
               <div class="transaction__type ${type}">${i + 1} ${type}</div>
               <div class="transaction__date">${displayDate}</div>
-              <div class="transaction__amount">${amount}€</div>
+              <div class="transaction__amount">${formattedAmount}</div>
             </div>
     `;
     transactionDisplay.insertAdjacentHTML("afterbegin", markup);

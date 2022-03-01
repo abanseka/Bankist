@@ -44,3 +44,13 @@ export const transactionDates = (date, locale) => {
 
   return new Intl.DateTimeFormat(locale).format(new Date(date));
 };
+
+
+export const formatCur = (value, locale, currency) => {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: currency,
+  }).format(value);
+};
+
+
