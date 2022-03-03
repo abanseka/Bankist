@@ -1,27 +1,24 @@
-import { transactionDisplay } from "./elements";
-import { formatCur, transactionDates } from "./updateUi";
+import { transactionDisplay } from './elements'
+import { formatCur, transactionDates } from './updateUi'
 
-export const displayTransactions = function(
+export const displayTransactions = function (
   currentAccount,
   transaction,
   sort = false
 ) {
-  const currAccount = currentAccount;
+  const currAccount = currentAccount
   // console.log(currAccount);
-  transactionDisplay.innerHTML = "";
+  transactionDisplay.innerHTML = ''
 
   const transacXn = sort
     ? transaction.slice().sort((a, b) => a - b)
-    : transaction;
+    : transaction
 
-  transacXn.forEach(function(amount, i) {
-    const type = amount > 0 ? "deposit" : "withdrawal";
-    const date = new Date(currAccount.transactionDates[i]);
+  transacXn.forEach(function (amount, i) {
+    const type = amount > 0 ? 'deposit' : 'withdrawal'
+    const date = new Date(currAccount.transactionDates[i])
     // console.log(date)
-    const displayDate = transactionDates(
-      date,
-      currAccount.locale
-    );
+    const displayDate = transactionDates(date, currAccount.locale)
     const formattedAmount = formatCur(
       amount,
       currAccount.locale,
@@ -33,7 +30,7 @@ export const displayTransactions = function(
               <div class="transaction__date">${displayDate}</div>
               <div class="transaction__amount">${formattedAmount}</div>
             </div>
-    `;
-    transactionDisplay.insertAdjacentHTML("afterbegin", markup);
-  });
-};
+    `
+    transactionDisplay.insertAdjacentHTML('afterbegin', markup)
+  })
+}
